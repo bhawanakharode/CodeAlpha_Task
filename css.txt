@@ -1,0 +1,81 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+.equal {
+    background-color: #1E90FF;
+    grid-column: span 4;
+}
+
+.equal:hover {
+    background-color: #4682B4;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 500px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .button {
+        font-size: 16px;
+        padding: 15px;
+    }
+    input {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
